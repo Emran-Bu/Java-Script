@@ -1,0 +1,38 @@
+  .scroll{
+            position : fixed;
+            right : 10px;
+            bottom : 10px;
+            background : #fff;
+            border-radius: 50%;
+            padding : 10px 14px;
+            color : #444;
+            display : none;
+            box-shadow: 0px 0px 5px 1px #ddd;
+        }
+
+	<span class="scroll">
+        <i class="fas fa-arrow-up"></i>
+    </span>
+
+$(document).on('scroll',function(){
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            $('.scroll').css({'display':'block'})
+            // mybutton.style.display = "block";
+        } else {
+            $('.scroll').css({'display':'none'})
+            // mybutton.style.display = "none";
+        }
+    })
+
+    $('.scroll').on('click',function(){
+        var scrl = document.documentElement.scrollTop;
+
+        var inter = setInterval(() => {
+            document.documentElement.scrollTop -= scrl/100
+            if(document.documentElement.scrollTop <= 0){
+                clearInterval(inter);
+            }
+
+        }, 1);
+
+    })
