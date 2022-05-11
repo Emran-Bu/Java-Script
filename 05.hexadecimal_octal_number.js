@@ -1,5 +1,13 @@
-var hex = 0x9ff
-var oct = 027
+var hex = 0xff
+var oct = 0275
 
 console.log(hex)
-console.log(oct)
+
+setTimeout(() => {
+    console.log(oct)  
+}, 5000);
+
+var a = 99
+var b = '99'
+
+console.log(a===b);
