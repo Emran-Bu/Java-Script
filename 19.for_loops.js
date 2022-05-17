@@ -49,6 +49,7 @@ for (var i = 1; i<=10; i++){
       // console.log(i)
       console.log(sum + '+' + i + '=' + (sum+i))
       sum = sum+i
-
   }
 }
+console.log('Total odd number sum : ' + sum);
+
